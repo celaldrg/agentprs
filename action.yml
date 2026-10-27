@@ -1,0 +1,47 @@
+name: agentprs
+description: How do AI agents' pull requests fare in your repo? Share, merge rate and time to merge per agent, as a job summary, badge and card.
+author: Celalettin Durğaç
+branding:
+  icon: git-pull-request
+  color: purple
+inputs:
+  repo:
+    description: Repository to analyse (owner/repo). Defaults to the current repository.
+    required: false
+    default: ${{ github.repository }}
+  args:
+    description: Extra CLI arguments, e.g. "--limit 500" or "--since 90d"
+    required: false
+    default: ""
+  badge:
+    description: Write a shields-style SVG badge to this path
+    required: false
+    default: ""
+  card:
+    description: Write an SVG report card to this path
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-go@v7
+      with:
+        go-version-file: ${{ github.action_path }}/go.mod
+        cache: false
+    - name: Build agentprs
+      shell: bash
+      run: cd "$GITHUB_ACTION_PATH" && go build -o "$RUNNER_TEMP/agentprs" .
+    - name: Run agentprs
+      shell: bash
+      env:
+        INPUT_REPO: ${{ inputs.repo }}
+        INPUT_ARGS: ${{ inputs.args }}
+        INPUT_BADGE: ${{ inputs.badge }}
+        INPUT_CARD: ${{ inputs.card }}
+        GITHUB_TOKEN: ${{ env.GITHUB_TOKEN || github.token }}
+      run: |
+        set -euo pipefail
+        EXTRA=()
+        [ -n "$INPUT_BADGE" ] && EXTRA+=(--badge "$INPUT_BADGE")
+        [ -n "$INPUT_CARD" ] && EXTRA+=(--card "$INPUT_CARD")
+        eval "\"$RUNNER_TEMP/agentprs\" \"\$INPUT_REPO\" $INPUT_ARGS --markdown \"\${EXTRA[@]}\"" >> "$GITHUB_STEP_SUMMARY"

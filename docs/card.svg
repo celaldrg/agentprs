@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="302" viewBox="0 0 600 302" role="img" aria-label="AI agents opened 365 of the last 1,000 PRs (36%). Agent PRs get merged about as often as human PRs (89% vs 88%).">
+<rect width="600" height="302" rx="14" fill="#0d1117" stroke="#30363d"/>
+<g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<text x="28" y="40" font-size="13" fill="#a78bfa" font-weight="600">agentprs</text><text x="96" y="40" font-size="13" fill="#7d8590">n8n-io/n8n · last 1,000 PRs</text>
+<text x="28" y="98" font-size="52" font-weight="700" fill="#e6edf3">36%</text>
+<text x="28" y="124" font-size="13" fill="#7d8590">of pull requests were opened by AI agents</text>
+<text x="340" y="142" font-size="12" fill="#7d8590">agent PRs merged</text><text x="340" y="168" font-size="22" font-weight="600" fill="#a78bfa">89%</text>
+<text x="470" y="142" font-size="12" fill="#7d8590">human PRs merged</text><text x="470" y="168" font-size="22" font-weight="600" fill="#e6edf3">88%</text>
+<text x="340" y="80" font-size="12" fill="#7d8590">median time to merge</text><text x="340" y="104" font-size="14" fill="#e6edf3">agents 23.9h · humans 23.2h</text>
+<text x="28" y="220" font-size="13" fill="#e6edf3">Claude Code</text><rect x="140" y="209" width="239.3" height="12" rx="3" fill="#8b5cf6"/><text x="387.3" y="220" font-size="12" fill="#7d8590">364 PRs · 89% merged</text>
+<text x="28" y="246" font-size="13" fill="#e6edf3">Cursor</text><rect x="140" y="235" width="2.0" height="12" rx="3" fill="#8b5cf6"/><text x="150.0" y="246" font-size="12" fill="#7d8590">1 PRs · – merged</text>
+<text x="28" y="282" font-size="11" fill="#7d8590">2026-10-15 → 2026-10-27 · github.com/celaldrg/agentprs</text>
+</g></svg>
