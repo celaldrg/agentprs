@@ -10,7 +10,7 @@ Thanks for taking the time to help. Bug reports, ideas, docs fixes and code are 
 
 ## Development setup
 
-You need Go 1.22 or newer. There are no third-party dependencies.
+You need Go 1.24 or newer. There are no third-party dependencies.
 
 ```sh
 git clone https://github.com/celaldrg/agentprs

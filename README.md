@@ -20,7 +20,7 @@ how often those PRs get merged, and how fast, next to the human baseline.
 ## Try it in 10 seconds
 
 ```sh
-# any public repo, no install (needs Go 1.22+)
+# any public repo, no install (needs Go 1.24+)
 go run github.com/celaldrg/agentprs@latest vercel/next.js
 
 # or install it
