@@ -70,7 +70,7 @@ What stands out:
 
 - **Where the team itself drives the agent, agent PRs merge like human PRs.** n8n, Home Assistant and Supabase
   maintainers open Claude Code PRs from their own accounts, and those merge at the same rate as everything else.
-- **Elsewhere, agent PRs get closed more often.** In 11 of the 15 repos where both rates could be measured, agent
+- **Elsewhere, agent PRs get closed more often.** In 9 of the 13 repos where both rates could be measured, agent
   PRs were merged at least 3 points less often than human PRs. Small samples (a dozen PRs) are noisy, so read the
   PR counts before the percentages.
 - Windows matter: the last 1,000 PRs cover 3 days in PostHog and 9 months in TypeScript.
